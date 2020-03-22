@@ -1,0 +1,92 @@
+{% extends 'front/master.html.twig' %}
+
+
+{% block seo %}
+    <meta name="title" content="{{ service.metaTitle }}">
+    <meta name="description" content="{{ service.metaDescription | raw }}" />
+    <meta name="keywords" content="{{ service.metaKeywords }}" />
+{% endblock %}
+
+{% block body %}
+
+    <!-- Start main-content -->
+    <div class="main-content">
+        <!-- Section: inner-header -->
+        <section class="inner-header divider parallax layer-overlay overlay-white-8" data-bg-img="http://placehold.it/1920x1280">
+            <div class="container pt-60 pb-60">
+                <!-- Section Content -->
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2 class="title"> {{  service.title }} </h2>
+                            <ol class="breadcrumb text-center text-black mt-10">
+                                <li><a href="{{ path('homepage') }}">الرئيسية</a></li>
+                                <li><a href="#">{{  service.category.title }}</a></li>
+                                <li class="active text-theme-colored"> {{  service.title }}</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Service details -->
+        <section>
+            <div class="container">
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-md-8 pull-left flip">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <img alt="{{ config.getConfig['site_name'] }}" style="height: 250px;width: 400px" src="{{  asset('uploads/Service/') }}{{ service.photo }}" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>{{  service.title }}</h3>
+
+                                    {{  service.description | raw }}
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-sx-12 col-sm-4 col-md-4 sidebar pull-right flip">
+                            <div class="widget">
+                                <h3 class="line-bottom mt-0">خدمات آخرى</h3>
+                                <div class="categories">
+                                    <ul class="list angle-double-right list-border">
+                                        {%  for service in services %}
+                                        <li>
+                                            <a href="{{ path('front_service_detail',{ 'id': service.id }) }}">{{ service.title }}</a>
+                                        </li>
+                                        {% endfor %}
+                                        {#<li>#}
+                                            {#<a href="#">إزالة الأسنان المصابة</a>#}
+                                        {#</li>#}
+                                        {#<li>#}
+                                            {#<a href="#">جراحة الفم</a>#}
+                                        {#</li>#}
+                                        {#<li>#}
+                                            {#<a href="#">جراحة زرع الأسنان</a>#}
+                                        {#</li>#}
+                                        {#<li>#}
+                                            {#<a href="#">ملء الأسنان</a>#}
+                                        {#</li>#}
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- end main-content -->
+
+{% endblock %}

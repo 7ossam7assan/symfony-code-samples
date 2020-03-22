@@ -1,0 +1,21 @@
+blogs:
+  resource: "@BlogBundle/Controller/Blog"
+  type: annotation
+  prefix:   /admin
+
+
+blog.api:
+  resource: BlogBundle\Controller\Blog\BlogApiController
+  type: rest
+  prefix: /api
+
+categories:
+    resource: "@BlogBundle/Controller/Category"
+    type:     annotation
+    prefix:   /admin
+
+
+categories.api:
+  resource: BlogBundle\Controller\Category\CategoryApiController
+  type: rest
+  prefix: /api

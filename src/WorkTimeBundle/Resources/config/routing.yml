@@ -1,0 +1,4 @@
+work_time:
+  resource: "@WorkTimeBundle/Controller/"
+  type:     annotation
+  prefix:   /admin/worktime

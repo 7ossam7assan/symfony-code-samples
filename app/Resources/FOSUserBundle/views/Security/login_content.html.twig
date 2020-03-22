@@ -1,0 +1,108 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+
+<div class="user-login-5">
+    <div class="row bs-reset">
+        <div class="col-md-6 bs-reset mt-login-5-bsfix">
+            <div class="login-bg" style="background-image:url(../assets/pages/img/login/bg1.jpg)">
+            </div>
+        </div>
+        <div class="col-md-6 login-container bs-reset mt-login-5-bsfix">
+
+            <div class="login-content">
+                <div>
+                    {% if error %}
+                        <h3>{{ error.messageKey|trans(error.messageData, 'security') }}</h3>
+                    {% endif %}
+                </div>
+
+                <h1> {{  config.getConfig['site_name'] }}  </h1>
+                <p> مرحبا بكم فى لوحه تحكم موقع {{  config.getConfig['site_name'] }} .. من خلال لوحه التحكم يمكنك التحكم بكل بيانات الموقع وتعديل كل بياناته  </p>
+
+                <form action="{{ path("fos_user_security_check") }}" class="login-form" method="post">
+                    {% if csrf_token %}
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                    {% endif %}
+                    <div class="alert alert-danger display-hide">
+                        <button class="close" data-close="alert"></button>
+                        <span>Enter any username and password. </span>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <input class="form-control form-control-solid placeholder-no-fix form-group"
+                                   type="text"
+                                   id="username"
+                                   name="_username"
+                                   value="{{ last_username }}"
+                                   autocomplete="username"
+                                   required/>
+                        </div>
+
+                        <div class="col-xs-6">
+                            <input class="form-control form-control-solid placeholder-no-fix form-group"
+                                   type="password"
+                                   id="password"
+                                   name="_password"
+                                   autocomplete="off"
+                                   required/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                        </div>
+                        <div class="col-sm-8 text-right">
+                            <div class="forgot-password">
+                            </div>
+                            <button class="btn green"   id="_submit" name="_submit" type="submit">تسجيل الدخول </button>
+                        </div>
+                    </div>
+                </form>
+                <!-- BEGIN FORGOT PASSWORD FORM -->
+                <!-- END FORGOT PASSWORD FORM -->
+            </div>
+            <div class="login-footer">
+                <div class="row bs-reset">
+                    <div class="col-xs-5 bs-reset">
+                        <ul class="login-social">
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="icon-social-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="icon-social-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="icon-social-dribbble"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-7 bs-reset">
+                        <div class="login-copyright text-right">
+                            <p>Copyright &copy; 2018</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{#<form action="{{ path("fos_user_security_check") }}" method="post">#}
+    {##}
+    {#<label for="username">{{ 'security.login.username'|trans }}</label>#}
+    {#<input type="text" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" />#}
+
+    {#<label for="password">{{ 'security.login.password'|trans }}</label>#}
+    {#<input type="password" id="password" name="_password" required="required" autocomplete="current-password" />#}
+
+    {#<input type="checkbox" id="remember_me" name="_remember_me" value="on" />#}
+    {#<label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>#}
+
+    {#<input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />#}
+{#</form>#}

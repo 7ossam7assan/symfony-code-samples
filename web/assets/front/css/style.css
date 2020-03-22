@@ -1,0 +1,120 @@
+/*
+@Author: ThemeMascot
+@URL: http://ThemeMascot.com
+
+This is the file where you can add your custom styles to change the look of the
+theme. But don't modify style-main.css file.
+
+*/
+
+/* Your custom css codes start here: */
+
+
+
+
+/*Fonts*/
+@font-face {
+    font-family:'DIN-NEXT-BOLD';
+    src: url(../fonts/DIN-NEXT-BOLD.otf);
+}
+@font-face {
+    font-family:'DIN-NEXT-MEDIUM';
+    src: url(../fonts/DIN-NEXT-MEDIUM.otf);
+}
+@font-face {
+    font-family:'DIN-NEXT-REGULAR';
+    src: url(../fonts/DIN-NEXT-REGULAR.otf);
+}
+
+body,
+.menuzord, .menuzord *,
+.font-raleway,
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+    font-family:'DIN-NEXT-REGULAR';
+}
+.menuzord-brand {
+    margin: 10px 30px 10px 0;
+    height: 65px;
+}
+.menuzord-brand img {
+    max-height: none; 
+    height: 100%; 
+}
+.menuzord i{
+    font-family: 'FontAwesome';
+}
+.menuzord.blue .menuzord-menu > li.active > a,
+.menuzord.blue .menuzord-menu > li:hover > a, 
+.menuzord.blue .menuzord-menu ul.dropdown li:hover > a{
+    background: #ffa207;
+}
+.menuzord-menu li .indicator{
+    margin-left: 0;
+    margin-right: 3px;
+}
+.menuzord-menu ul.dropdown li a {
+    font-size: 14px;
+}
+.layer-overlay.overlay-blue::before {
+    background-color: rgba(255, 162, 7, 0.9);
+}
+
+/* Margin right */
+.mr-10 {
+    margin-right: 0 !important;
+    margin-left: 10px !important;
+}
+/* Margin left */
+.ml-60 {
+    margin-left: 0 !important;
+    margin-right: 60px !important;
+}
+
+/* Padding left */
+.features-style1 .pl-15 {
+    padding-left: 0 !important;
+    padding-right: 15px !important;
+}
+
+
+
+.opening-hours ul li span{
+    float: right;
+}
+.opening-hours ul li .value{
+    float: left;
+}
+.gallery-isotope .gallery-item .icons-holder{
+    left: auto;
+    right: 50%;
+}
+
+/* Blog Page 
+=========================*/
+html[dir="rtl"] .cd-timeline-block:nth-child(odd) .cd-timeline-content{
+    text-align: right;
+}
+html[dir="rtl"] .post .entry-title {
+    margin-right: 0px !important;
+    margin-left: 15px !important;
+}
+blockquote.theme-colored {
+    border-left: 3px solid transparent !important;
+    border-right: 3px solid #ffa207;
+}
+.media-post .post-thumb {
+    float: right !important;
+    margin: 0 0 10px 10px !important;
+}
+/* Contact Page 
+=========================*/
+html[dir="rtl"] .icon-box.left a{
+    float: right !important;
+}
+
+
+/* Videos-Page
+========================= */
+.gallery-item .thumb{
+    margin-bottom: 5px;
+}

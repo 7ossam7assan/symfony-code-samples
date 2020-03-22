@@ -1,0 +1,22 @@
+service:
+  resource: "@ServiceBundle/Controller/Service/"
+  type:     annotation
+  prefix:   /admin
+
+service.api:
+  resource: ServiceBundle\Controller\Service\ServiceApiController
+  type:     rest
+  prefix:   /api
+
+
+service.categories:
+  resource: "@ServiceBundle/Controller/Category"
+  type: annotation
+  prefix: /admin
+
+service.categories.api:
+  resource: ServiceBundle\Controller\Category\CategoryApiController
+  type: rest
+  prefix: /api
+
+

@@ -1,0 +1,22 @@
+video:
+  resource: "@VideoBundle/Controller/Video/"
+  type:     annotation
+  prefix:   /admin
+
+video.api:
+  resource: VideoBundle\Controller\Video\VideoApiController
+  type:     rest
+  prefix:   /api
+
+
+video.categories:
+  resource: "@VideoBundle/Controller/Category"
+  type: annotation
+  prefix: /admin
+
+video.categories.api:
+  resource: VideoBundle\Controller\Category\CategoryApiController
+  type: rest
+  prefix: /api
+
+

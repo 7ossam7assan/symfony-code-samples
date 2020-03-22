@@ -1,0 +1,4 @@
+services:
+#    testimonial.example:
+#        class: TestimonialBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

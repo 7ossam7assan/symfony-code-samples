@@ -1,0 +1,78 @@
+
+{% extends 'front/master.html.twig' %}
+
+
+{% block seo %}
+    <meta name="title" content="{{ category.metaTitle }}">
+    <meta name="description" content="{{ category.metaDescription | raw }}" />
+    <meta name="keywords" content="{{ category.metaKeywords }}" />
+{% endblock %}
+
+{% block body %}
+
+    <!-- Start main-content -->
+    <div class="main-content">
+
+        <!-- Section: inner-header -->
+        <section class="inner-header divider parallax layer-overlay overlay-white-8" data-bg-img="http://placehold.it/1920x1280">
+            <div class="container pt-60 pb-60">
+                <!-- Section Content -->
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2 class="title">الخدمات</h2>
+                            <ol class="breadcrumb text-center text-black mt-10">
+                                <li><a href="#">الرئيسية</a></li>
+                                <li class="active text-theme-colored"> {{ category.title }}</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row multi-row-clearfix">
+                    <div class="services">
+
+                        {% for cat in category.service %}
+
+                        <div class="col-md-4">
+                            <article class="services-box clearfix mb-30 bg-lighter">
+                                <div class="entry-header">
+                                    <div class="post-thumb thumb">
+                                        <img src="{{ asset('uploads/Service/') }}{{ cat.photo }}" alt="{{ config.getConfig['site_name'] }}" class="img-responsive img-fullwidth">
+                                    </div>
+                                </div>
+                                <div class="entry-content border-1px p-20 pr-10">
+                                    <div class="entry-meta media mt-0 no-bg no-border">
+                                        <div class="media-body pl-15">
+                                            <div class="event-content pull-left flip">
+                                                <h5 class="entry-title text-white text-uppercase m-0 mt-5">
+                                                    <a href="{{  path('front_service_detail',{ 'id':cat.id }) }}">
+                                                        {{ cat.title }}
+                                                    </a>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="mt-10">
+                                          {{ cat.description }}
+                                    </p>
+                                    <a href="{{  path('front_service_detail',{ 'id':cat.id }) }}" class="btn-read-more">قراءة المزيد</a>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </article>
+                        </div>
+
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- end main-content -->
+
+{% endblock %}

@@ -1,0 +1,9 @@
+team:
+  resource: "@TeamBundle/Controller/"
+  type:     annotation
+  prefix:   /admin
+
+team.api:
+  resource: TeamBundle\Controller\TeamApiController
+  type: rest
+  prefix: /api

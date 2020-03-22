@@ -1,0 +1,70 @@
+contact:
+    resource: "@ContactBundle/Resources/config/routing.yml"
+
+work_time:
+    resource: "@WorkTimeBundle/Resources/config/routing.yml"
+
+photo_album:
+    resource: "@PhotoAlbumBundle/Resources/config/routing.yml"
+
+config:
+    resource: "@ConfigBundle/Resources/config/routing.yml"
+
+video:
+    resource: "@VideoBundle/Resources/config/routing.yml"
+
+service:
+    resource: "@ServiceBundle/Resources/config/routing.yml"
+
+team:
+    resource: "@TeamBundle/Resources/config/routing.yml"
+
+blog:
+    resource: "@BlogBundle/Resources/config/routing.yml"
+
+pages:
+    resource: "@PagesBundle/Resources/config/routing.yml"
+
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+    prefix: /
+
+
+
+
+
+
+testimonial:
+    resource: "@TestimonialBundle/Resources/config/routing.yml"
+
+
+
+project:
+    resource: "@ProjectBundle/Resources/config/routing.yml"
+
+
+slider:
+    resource: "@SliderBundle/Resources/config/routing.yml"
+
+#api:
+#    resource: "@ApiBundle/Controller/"
+#    type:     annotation
+#    prefix:   /
+
+
+helpers:
+    resource: "@HelpersBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.yaml"
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+

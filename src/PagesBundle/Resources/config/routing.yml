@@ -1,0 +1,19 @@
+pages:
+  resource: "@PagesBundle/Controller/Pages"
+  type:     annotation
+  prefix:   /admin
+
+pages.api:
+  resource: PagesBundle\Controller\Pages\PagesApiController
+  type: rest
+  prefix: /api
+
+categories:
+    resource: "@PagesBundle/Controller/Categories"
+    type:     annotation
+    prefix:   /admin
+
+categories.api:
+  resource: PagesBundle\Controller\Categories\CategoriesApiController
+  type: rest
+  prefix: /api

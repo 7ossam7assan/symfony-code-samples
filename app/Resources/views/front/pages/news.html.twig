@@ -1,0 +1,382 @@
+{% extends 'front/master.html.twig' %}
+
+
+
+{% block seo %}
+    <meta name="title" content="{{ article.metaTitle }}">
+    <meta name="description" content="{{ article.metaDescription | raw }}" />
+    <meta name="keywords" content="{{ article.metaKeywords }}" />
+{% endblock %}
+
+{% block body %}
+
+    <!-- Start main-content -->
+    <div class="main-content">
+
+        <!-- Section: inner-header -->
+        <section class="inner-header divider parallax layer-overlay overlay-white-8" data-bg-img="http://placehold.it/1920x1280">
+            <div class="container pt-60 pb-60">
+                <!-- Section Content -->
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2 class="title">اﻷخبار</h2>
+                            <ol class="breadcrumb text-center text-black mt-10">
+                                <li><a href="#">الرئيسية</a></li>
+                                <li class="active text-theme-colored"> {{ article.title }}</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container mt-30 mb-30 pt-30 pb-30">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="blog-posts single-post">
+                            <article class="post clearfix mb-0">
+                                <div class="entry-header">
+                                    <div class="post-thumb thumb">
+                                        <img src="{{ asset('uploads/Blogs') }}/{{ article.photo }}" alt="{{ config.getConfig['site_name'] }}" class="img-responsive img-fullwidth">
+                                    </div>
+                                </div>
+                                <div class="entry-content">
+                                    <div class="entry-meta media no-bg no-border mt-15 pb-20">
+                                        <div class="entry-date media-left text-center flip bg-theme-colored pt-5 pr-15 pb-5 pl-15">
+                                            <ul>
+                                                <li class="font-16 text-white font-weight-600">28</li>
+                                                <li class="font-12 text-white text-uppercase">فبراير</li>
+                                            </ul>
+                                        </div>
+                                        <div class="media-body pl-15">
+                                            <div class="event-content pull-left flip">
+                                                <h4 class="entry-title text-white text-uppercase pt-0 mt-0">
+                                                    <a href="#">
+                                                        {{ article.title }}
+                                                    </a>
+                                                </h4>
+                                                <span class="mb-10 text-gray-darkgray mr-10 font-13">
+                                                            <i class="fa fa-commenting-o mr-5 text-theme-colored"></i>
+                                                            214 تعليقات
+                                                        </span>
+                                                <span class="mb-10 text-gray-darkgray mr-10 font-13">
+                                                            <i class="fa fa-heart-o mr-5 text-theme-colored"></i>
+                                                            895 اعجاب
+                                                        </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  {{ article.description | raw }}
+                                    <div class="mt-30 mb-0">
+                                        <h5 class="pull-left flip mt-10 mr-20 text-theme-colored">
+                                            مشاركة:
+                                        </h5>
+                                        <ul class="styled-icons icon-circled m-0">
+                                            <li>
+                                                <a href="#" data-bg-color="#3A5795">
+                                                    <i class="fa fa-facebook text-white"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-bg-color="#55ACEE">
+                                                    <i class="fa fa-twitter text-white"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-bg-color="#A11312">
+                                                    <i class="fa fa-google-plus text-white"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+                            <div class="tagline p-0 pt-20 mt-5">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="tags">
+                                            <p class="mb-0">
+                                                <i class="fa fa-tags text-theme-colored"></i> <span>كلمات دلالية:</span>
+                                                {{ article.tags }}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="share text-right flip">
+                                            <p>
+                                                <i class="fa fa-share-alt text-theme-colored"></i>
+                                                مشاركة
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="author-details media-post">
+                                <a href="#" class="post-thumb mb-0 pull-left flip pr-20">
+                                    <img class="img-thumbnail"  alt="{{ config.getConfig['site_name'] }}" src="http://placehold.it/125x148">
+                                </a>
+                                <div class="post-right">
+                                    <h5 class="post-title mt-0 mb-0">
+                                        <a href="#" class="font-18">John Doe</a>
+                                    </h5>
+                                    <p>
+                                        هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن هذا النص, ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر.
+                                    </p>
+                                    <ul class="styled-icons square-sm m-0">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-google-plus"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="comments-area">
+                                <h5 class="comments-title">التعليقات</h5>
+                                <ul class="comment-list">
+                                    <li>
+                                        <div class="media comment-author">
+                                            <a class="media-left" href="#">
+                                                <img class="media-object img-thumbnail" src="http://placehold.it/75x75" alt="{{ config.getConfig['site_name'] }}">
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading comment-heading">
+                                                    John Doe :
+                                                </h5>
+                                                <div class="comment-date">
+                                                    23/06/2014
+                                                </div>
+                                                <p>
+                                                    هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن هذا النص, ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر...
+                                                </p>
+                                                <a class="replay-icon pull-right flip text-theme-colored" href="#">
+                                                    <i class="fa fa-commenting-o text-theme-colored"></i>
+                                                    الرد
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media comment-author">
+                                            <a class="media-left" href="#">
+                                                <img class="media-object img-thumbnail" src="http://placehold.it/75x75"  alt="{{ config.getConfig['site_name'] }}">
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading comment-heading">
+                                                    John Doe :
+                                                </h5>
+                                                <div class="comment-date">
+                                                    23/06/2014
+                                                </div>
+                                                <p>
+                                                    هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن هذا النص, ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر.
+                                                </p>
+                                                <a class="replay-icon pull-right flip text-theme-colored" href="#">
+                                                    <i class="fa fa-commenting-o text-theme-colored"></i>
+                                                    الرد
+                                                </a>
+                                                <div class="clearfix"></div>
+                                                <div class="media comment-author nested-comment">
+                                                    <a href="#" class="media-left">
+                                                        <img class="media-object img-thumbnail" src="http://placehold.it/75x75" alt="{{ config.getConfig['site_name'] }}">
+                                                    </a>
+                                                    <div class="media-body p-20 bg-lighter">
+                                                        <h5 class="media-heading comment-heading">
+                                                            John Doe:
+                                                        </h5>
+                                                        <div class="comment-date">
+                                                            23/06/2014
+                                                        </div>
+                                                        <p>
+                                                            هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن هذا النص, ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر.
+                                                        </p>
+                                                        <a class="replay-icon pull-right flip text-theme-colored" href="#">
+                                                            <i class="fa fa-commenting-o text-theme-colored"></i>
+                                                            الرد
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="media comment-author nested-comment">
+                                                    <a href="#" class="media-left">
+                                                        <img class="media-object img-thumbnail" src="http://placehold.it/75x75"  alt="{{ config.getConfig['site_name'] }}">
+                                                    </a>
+                                                    <div class="media-body p-20 bg-lighter">
+                                                        <h5 class="media-heading comment-heading">
+                                                            John Doe :
+                                                        </h5>
+                                                        <div class="comment-date">
+                                                            23/06/2014
+                                                        </div>
+                                                        <p>
+                                                            هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن هذا النص, ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر...
+                                                        </p>
+                                                        <a class="replay-icon pull-right flip text-theme-colored" href="#">
+                                                            <i class="fa fa-commenting-o text-theme-colored"></i>
+                                                            الرد
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="media comment-author">
+                                            <a class="media-left" href="#">
+                                                <img class="media-object img-thumbnail" src="http://placehold.it/75x75"  alt="{{ config.getConfig['site_name'] }}">
+                                            </a>
+                                            <div class="media-body">
+                                                <h5 class="media-heading comment-heading">
+                                                    John Doe :
+                                                </h5>
+                                                <div class="comment-date">
+                                                    23/06/2014
+                                                </div>
+                                                <p>
+                                                    هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن هذا النص, ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر...
+                                                </p>
+                                                <a class="replay-icon pull-right flip text-theme-colored" href="#">
+                                                    <i class="fa fa-commenting-o text-theme-colored"></i>
+                                                    الرد
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="comment-box">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h5>اترك تعليقك</h5>
+                                        <div class="row">
+                                            <form role="form" id="comment-form">
+                                                <div class="col-sm-6 pt-0 pb-0">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" required name="contact_name" id="contact_name" placeholder="ادخا اسمك">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" required class="form-control" name="contact_email2" id="contact_email2" placeholder="ادخل بريدك الالكترونى">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input type="text" placeholder="ادخل موقعك" required class="form-control" name="subject">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <textarea class="form-control" required name="contact_message2" id="contact_message2"  placeholder="رسالتك" rows="7"></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <button type="submit" class="btn btn-dark btn-flat pull-right m-0" data-loading-text="Please wait...">
+                                                            تاكيد
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="sidebar sidebar-left mt-sm-30">
+                            <div class="widget">
+                                <h5 class="widget-title line-bottom">البحث</h5>
+                                <div class="search-form">
+                                    <form>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="اضغط للبحث" class="form-control search-input">
+                                            <span class="input-group-btn">
+                                                        <button type="submit" class="btn search-button">
+                                                            <i class="fa fa-search"></i>
+                                                        </button>
+                                                    </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="widget">
+                                <h5 class="widget-title line-bottom">الاقسام</h5>
+                                <div class="categories">
+                                    <ul class="list list-border angle-double-right">
+                                        {% for category in categories %}
+                                        <li>
+                                            <a href="#">
+                                                {{ category.title }}<span>({{ category.blogs| length }})</span>
+                                            </a>
+                                        </li>
+                                        {% endfor %}
+                                        {#<li>#}
+                                            {#<a href="#">#}
+                                                {#معرض صور<span>(21)</span>#}
+                                            {#</a>#}
+                                        {#</li>#}
+                                        {#<li>#}
+                                            {#<a href="#">#}
+                                                {#لياقة<span>(15)</span>#}
+                                            {#</a>#}
+                                        {#</li>#}
+                                        {#<li>#}
+                                            {#<a href="#">#}
+                                                {#صالة العاب رياضية<span>(35)</span>#}
+                                            {#</a>#}
+                                        {#</li>#}
+                                        {#<li>#}
+                                            {#<a href="#">#}
+                                                {#شخصى<span>(16)</span>#}
+                                            {#</a>#}
+                                        {#</li>#}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="widget">
+                                <h5 class="widget-title line-bottom">أخر الأخبار</h5>
+                                <div class="latest-posts">
+                                    {% for article in news %}
+                                    <article class="post media-post clearfix pb-0 mb-10">
+                                        <a class="post-thumb" href="#">
+                                            <img src="{{ asset('uploads/Blogs') }}/{{ article.photo }}" style="width: 75px;height: 75px"  alt="{{ config.getConfig['site_name'] }}">
+                                        </a>
+                                        <div class="post-right">
+                                            <h5 class="post-title mt-0">
+                                                <a href="{{ path('front_news_details',{'slug':article.slug}) }}">{{ article.title }}</a>
+                                            </h5>
+                                            <p>
+                                                {{ article.shortDesc | raw }}
+                                            </p>
+                                        </div>
+                                    </article>
+                                    {% endfor %}
+
+
+                                </div>
+                            </div>
+                            <div class="widget">
+                                <h5 class="widget-title line-bottom">صور من Flickr</h5>
+                                <div id="flickr-feed" class="clearfix">
+                                    <!-- Flickr Link -->
+                                    <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=9&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=52617155@N08">
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- end main-content -->
+
+{% endblock %}

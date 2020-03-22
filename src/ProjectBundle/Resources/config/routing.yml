@@ -1,0 +1,22 @@
+Category:
+  resource: "@ProjectBundle/Controller/Categories"
+  type:     annotation
+  prefix:   /admin
+
+
+category.api:
+  resource: ProjectBundle\Controller\Categories\CategoryApiController
+  type: rest
+  prefix: /api/
+
+
+
+project:
+  resource: "@ProjectBundle/Controller/Projects"
+  type:     annotation
+  prefix:   /admin
+
+project.api:
+  resource: ProjectBundle\Controller\Projects\ProjectApiController
+  type: rest
+  prefix: /api/

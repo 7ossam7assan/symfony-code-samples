@@ -1,0 +1,7 @@
+photo_album:
+  resource: "@PhotoAlbumBundle/Controller"
+  type: annotation
+  prefix:   /admin
+
+
+

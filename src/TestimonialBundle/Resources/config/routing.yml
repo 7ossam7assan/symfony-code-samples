@@ -1,0 +1,10 @@
+testimonial:
+  resource: "@TestimonialBundle/Controller/"
+  type:     annotation
+  prefix:   /admin
+
+
+testimonial.api:
+  resource: TestimonialBundle\Controller\TestimonialApiController
+  type: rest
+  prefix: /api/

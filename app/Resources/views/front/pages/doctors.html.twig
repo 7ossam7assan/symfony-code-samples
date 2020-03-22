@@ -1,0 +1,174 @@
+
+{% extends 'front/master.html.twig' %}
+
+
+{% block seo %}
+    {#<meta name="title" content="{{  }}">#}
+    {#<meta name="description" content="{{  }}" />#}
+    {#<meta name="keywords" content="{{  }}" />#}
+{% endblock %}
+
+{% block body %}
+
+    <!-- Start main-content -->
+    <div class="main-content">
+        <!-- Section: inner-header -->
+        <section class="inner-header divider parallax layer-overlay overlay-white-8" data-bg-img="http://placehold.it/1920x1280">
+            <div class="container pt-60 pb-60">
+                <!-- Section Content -->
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2 class="title">الأطباء</h2>
+                            <ol class="breadcrumb text-center text-black mt-10">
+                                <li><a href="{{ path('homepage') }}">الرئيسية</a></li>
+                                <li><a href="#">الاطباء</a></li>
+                                {#<li class="active text-theme-colored">عنوان الصفحة</li>#}
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Doctors -->
+        <section>
+            <div class="container pb-30 pb-sm-30">
+                <div class="section-title text-center">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h2 class="mt-0 line-height-1 text-center text-uppercase">
+                                التقى ب
+                                <span class="text-theme-colored">اطباؤنا</span>
+                            </h2>
+                            <p>
+                                هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن هذا النص, ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="row">
+                        {% for doctor in doctors %}
+                        <div class="col-md-4 mb-sm-30">
+                            <div class="team-block">
+                                <div class="team-thumb border-2px">
+
+
+                                        <img class="img-fullwidth" src="{{ asset('uploads/Teams/'~doctor.photo~'') }}"  alt="{{ config.getConfig['site_name'] }}">
+
+                                    <div class="team-overlay">
+                                        <ul class="list-inline text-white font-12 mb-10">
+                                            <li>
+                                                <i aria-hidden="true" class="fa fa-phone text-theme-color-2 mr-10"></i>
+                                                التليفون: {{ doctor.phone }}
+                                            </li>
+                                            <li>
+                                                <i aria-hidden="true" class="fa fa-envelope-o text-theme-color-2 mr-10"></i>
+                                                البريد الالكترونى: {{ doctor.email }}
+                                            </li>
+                                        </ul>
+                                        <p class="text-white font-13 mt-10">
+                                            {{ doctor.jobTitle }}
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="info bg-white text-center">
+                                    <h4>
+                                        {{ doctor.title }}
+                                    </h4>
+                                    <p>
+                                        اخصائى العلاج الطبيعى
+                                    </p>
+                                    <ul class="styled-icons icon-theme-colored icon-circled icon-dark icon-sm mt-15 mb-0">
+                                        <li>
+                                            <a href="{{ doctor.fbLink }}">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ doctor.twitterLink }}">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ doctor.youtubeLink }}">
+                                                <i class="fa fa-youtube"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ doctor.skypeLink }}">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider: Funfact -->
+        <section class="divider parallax layer-overlay overlay-deep" data-bg-img="http://placehold.it/1920x1280">
+            <div class="container pt-0 pb-0">
+                <div class="pt-40 pb-40 pb-sm-0">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+                            <div class="funfact text-center">
+                                <a href="#">
+                                    <i class="fa fa-calendar text-theme-colored font-36"></i>
+                                </a>
+                                <h5 class="animate-number text-gray-base font-36" data-value="8" data-animation-duration="2500">0</h5>
+                                <h6 class="title text-gray-darkgray font-16">
+                                    سنوات من الخبرة
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+                            <div class="funfact text-center">
+                                <a href="#">
+                                    <i class="fa fa-user text-theme-colored font-36"></i>
+                                </a>
+                                <h5 class="animate-number text-gray-base font-36" data-value="1921" data-animation-duration="2500">0</h5>
+                                <h6 class="title text-gray-darkgray font-16">
+                                    مرضى يعاملون سنويا
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+                            <div class="funfact text-center">
+                                <a href="#">
+                                    <i class="fa fa-globe text-theme-colored font-36"></i>
+                                </a>
+                                <h5 class="animate-number text-gray-base font-36" data-value="25" data-animation-duration="2500">0</h5>
+                                <h6 class="title text-gray-darkgray font-16">
+                                    دول العالم
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
+                            <div class="funfact text-center">
+                                <a href="#">
+                                    <i class="fa fa-trophy text-theme-colored font-36"></i>
+                                </a>
+                                <h5 class="animate-number text-gray-base font-36" data-value="12" data-animation-duration="2500">0</h5>
+                                <h6 class="title text-gray-darkgray font-16">
+                                    جوائز
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- end main-content -->
+
+{% endblock %}
+
+
+
